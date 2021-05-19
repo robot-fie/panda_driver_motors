@@ -67,7 +67,7 @@ PRSCLR_CONST = 4096.0
 
 bus = i2cdev.I2C(ADDRESS_I2C_DEFAULT,1)
 
-class PCA9865():
+class PCA9685():
 
     def reset_PWM (self):
         bus.write(bytes([ALL_LED_ON_L,0]))   #All pins set to zero
