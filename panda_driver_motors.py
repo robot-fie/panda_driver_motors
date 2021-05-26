@@ -58,7 +58,7 @@ def move_motors (motors, direction):
     for m, d in zip(motors, direction):
         print(f'Move motors: {m},{d[0]},{d[1]}')
         enable_motor(m,d[0],d[1])
-    
+
 def move_dir_FW (frac_izq, frac_der):
     duty_izq = int(PWM_DUTY*frac_izq)
     duty_der = int(PWM_DUTY*frac_der)
@@ -81,11 +81,10 @@ def stop():
         pca9685.set_PWM(left_back_IN_BW,0)
         pca9685.set_PWM(left_back_IN_FW,0)
 
-if __name__ == "__main__":
-    stop()
-    time.sleep(1)
-    move_dir_FW (0.9,0.4)
-    time.sleep(1)
-    stop()
-    time.sleep(1)
-    
+# if __name__ == "__main__":
+#     stop()
+#     time.sleep(1)
+#     move_dir_FW (0.9,0.4)
+#     time.sleep(1)
+#     stop()
+#     time.sleep(1)
